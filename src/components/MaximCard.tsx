@@ -53,7 +53,7 @@ export const MaximCard = ({ maxim, className }: MaximCardProps) => {
           </div>
         </div>
 
-        {/* Back Side - English */}
+        {/* Back Side - English & Description */}
         <div className={cn(
           "absolute inset-0 w-full h-full backface-hidden rotate-y-180",
           "flex flex-col justify-center items-center p-6 text-center",
@@ -68,12 +68,16 @@ export const MaximCard = ({ maxim, className }: MaximCardProps) => {
             </Badge>
           </div>
           
-          <h2 className="text-xl md:text-2xl font-sans font-medium text-foreground mb-4 leading-relaxed">
+          <h2 className="text-lg md:text-xl font-sans font-medium text-foreground mb-3 leading-relaxed">
             "{maxim.english}"
           </h2>
           
+          <p className="text-sm text-muted-foreground leading-relaxed mb-4 max-w-xs">
+            {maxim.description}
+          </p>
+          
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-            <p className="text-sm text-muted-foreground font-medium">
+            <p className="text-xs text-muted-foreground font-medium">
               Tap to see Latin
             </p>
           </div>
