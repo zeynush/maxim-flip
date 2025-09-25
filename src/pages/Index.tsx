@@ -24,7 +24,7 @@ const Index = () => {
           <div className="flex items-center justify-center mb-4">
             <BookOpen className="w-8 h-8 text-primary mr-3" />
             <h1 className="text-3xl font-serif font-semibold text-primary">
-              Lex Maxims
+              Lexiconic
             </h1>
           </div>
           <p className="text-muted-foreground font-medium">
