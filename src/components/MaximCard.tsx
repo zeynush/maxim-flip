@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { LegalMaxim } from "@/data/maxims";
@@ -11,6 +11,11 @@ interface MaximCardProps {
 
 export const MaximCard = ({ maxim, className }: MaximCardProps) => {
   const [isFlipped, setIsFlipped] = useState(false);
+
+  // Reset flip state when maxim changes
+  useEffect(() => {
+    setIsFlipped(false);
+  }, [maxim.id]);
 
   const handleCardClick = () => {
     setIsFlipped(!isFlipped);
